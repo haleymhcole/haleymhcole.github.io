@@ -1,0 +1,152 @@
+/*
+background color sets the colour of the page itself.
+
+color sets the colour of the text on the page.
+
+hex color codes from https://htmlcolorcodes.com/
+
+black is #111111
+
+-- Haley Cole Creates Color Palette --
+Light pink: #CCB7BB
+Dark pink: #BF9B9F
+Light beige: #E7D4C6 
+Dark beige: #DAC0AE 
+Brown: #BC9781 
+Green: #859680 
+
+ */
+
+:root {
+  --main-bg-color: white;
+  --light-pink: #CCB7BB;
+  --dark-pink: #BF9B9F;
+  --light-beige: #E7D4C6;
+  --dark-beige: #DAC0AE;
+  --brown: #BC9781;
+  --green: #859680;
+  --text-color: #651301;
+  --black: #322624;
+}
+
+html{
+  background-color: #FFFFFF;
+}
+
+body{
+  background-color: #FFFFFF;
+  color: var(--black);
+}
+
+
+h1{
+  color: var(--black);  
+}
+
+h1.block{
+  background-color: var(--light-beige); 
+  color: var(--black);
+}
+
+.calligraphy{
+  color: var(--light-beige);
+}
+
+marquee {
+  color: var(--green);
+}
+
+
+icon-btn{
+  background-color: white;
+  color: var(--black);
+  margin: 2em;
+}
+
+button{
+	background-color: var(--green);
+  color: white;
+}
+
+
+
+/* h2 is basically my subtitle */
+h3.block{
+  background-color: var(--light-beige); 
+  color: var(--black);
+}
+
+/*
+h3 is used for the subheadings, like "full-length"
+ */
+
+h2{
+  color: var(--green); 
+}
+
+/*
+h4 is used for the dates in this template
+ */
+
+h4{
+  color: #313D1D;
+}
+
+/*
+This sets the colour of the links on your page
+ */
+
+a, a:visited {
+  color: #000000;
+}
+
+/*
+This sets the colour of the link when you hover over it
+ */
+
+a:hover {
+  color: var(--green);
+}
+
+.topnav a{
+  color: var(--dark-beige);
+}
+
+.topnav-centered a:hover {
+  /*background-color: #CCB7BB*/
+  background-color: var(--dark-beige); 
+  color: white;
+}
+
+/*
+This sets the colour of the circle around each of the contact icons
+originally #333333
+ */
+
+.fab, .fas, .fa-solid{
+  background-color: black;
+}
+
+/*
+This sets the colour of icon itself
+ */
+
+a > .fab, a > .fas, a > .fa-solid{
+  color: #eeeeee;
+}
+
+/*
+This sets the colour of the circle around the icon when you hover over it
+ */
+
+.fab:hover, .fas:hover, .fa-solid:hover{
+  background-color: blue;
+}
+
+/*
+This sets the colour of icon itself when you hover over it
+ */
+
+a > .fab:hover, a > .fas:hover, a > .fa-solid:hover{
+  color: #eeeeee;
+}
