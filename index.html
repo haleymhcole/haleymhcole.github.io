@@ -106,7 +106,13 @@ The title is what appears in the tab label on a browser.
 	</div>
 	-->
 
+<center>
+	<a href="#" class="logo">
+    <img src="./assets/imgs/logos/logo.png" alt="logo" width="300" height="auto">
+  </a>
+</center>
 
+<!--
 	<header class="header" data-header>
 
 		
@@ -118,11 +124,11 @@ The title is what appears in the tab label on a browser.
       <div class="header-search">
         <input type="search" name="search" placeholder="Search Product..." class="input-field">
 
-        <!--
+        
         <icon-btn class="search-btn" aria-label="Search">
           <ion-icon name="search-outline"></ion-icon>
         </icon-btn>
-      -->
+      
       </div>
 
       <a href="#" class="logo">
@@ -132,7 +138,7 @@ The title is what appears in the tab label on a browser.
 
       <div class="header-actions">
 
-      	<!--
+      	
         <icon-btn class="header-action-btn">
           <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
@@ -145,7 +151,7 @@ The title is what appears in the tab label on a browser.
 
           <p class="header-action-label">Search</p>
         </button>
-        -->
+        
 
 
         <icon-btn class="header-action-btn">
@@ -153,7 +159,7 @@ The title is what appears in the tab label on a browser.
 
         </icon-btn>
 
-        <!--
+        
 					<p class="header-action-label">Cart</p>
 
           <div class="btn-badge green" aria-hidden="true">3</div>
@@ -167,63 +173,17 @@ The title is what appears in the tab label on a browser.
 
           <div class="btn-badge" aria-hidden="true">2</div>
         </icon-btn>
-      	-->
+      	
 
       </div>
 
 
-      <!--
-      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    -->
-
 
     </div>
 
-      <!--
-      <nav class="navbar" data-navbar>
 
-        <div class="navbar-top">
+  -->
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" alt="Casmart logo" width="130" height="31">
-          </a>
-
-          <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-
-        </div>
-
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link">Home</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">Shop</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">About</a>
-          </li>
-
-          <li>
-            <a href="#blog" class="navbar-link">Email</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">Gallery</a>
-          </li>
-
-        </ul>
-
-      </nav>
-    	-->
 
   
   </header>
@@ -253,7 +213,6 @@ The title is what appears in the tab label on a browser.
 	<!--
 	------------------------- BANNER --------------------------------
 	
-	-->
 	<center>
 		<div style="display: grid; grid-template-columns: 2fr 1fr; grid-gap: 0px; margin: 0em">
 
@@ -262,7 +221,7 @@ The title is what appears in the tab label on a browser.
 					Eclectic & Timeless Art
 				</h1>
 				<h3>
-					Brighten your space with timeless, ready-to-hang art compositions! Shop now for unique, pieces in a variety of captivating mediums.
+					Brighten your space with timeless, ready-to-hang art compositions! Shop now for unique pieces in a variety of captivating mediums.
 				</h3>
 
 			</div>
@@ -276,6 +235,70 @@ The title is what appears in the tab label on a browser.
 
 		</div>
 	</center>
+
+
+
+	<img src="assets/imgs/high_dpi/flare_slideshow.png" style="width:100%">
+
+	-->
+
+
+	
+
+
+
+	<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+		  <img src="assets/imgs/high_dpi/flare_slideshow.png" style="width:100%; height: 300px; overflow: hidden; object-fit: cover;">
+		  <div class="text">Caption Text</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 3</div>
+		  <img src="assets/imgs/high_dpi/clouds.png" style="width:100%; height: 300px; overflow: hidden; object-fit: cover;">
+		  <div class="text">Caption Two</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 3</div>
+		  <img src="assets/imgs/high_dpi/blue_slideshow.png" style="width:100%; height: 300px; overflow: hidden; object-fit: cover;">
+		  <div class="text">Caption Three</div>
+		</div>
+
+	</div>
+
+	<br>
+
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+
+	<script>
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  //setTimeout(showSlides, 2000); // Change image every 2 seconds
+	  setTimeout(showSlides, 4000); // Change image every 4 seconds
+	}
+	</script>
 
 
 
@@ -440,14 +463,14 @@ The title is what appears in the tab label on a browser.
 		<div class="grid-container2">
 			<div>
 				<a>
-					<img src="assets/imgs/high_dpi/flare.png",  height="auto", width="100%">
+					<img src="assets/imgs/acrylics/flare_low_dpi.png",  height="auto", width="100%">
 					Shop Best Selling Prints
 				</a>
 			</div>
 
 			<div>
 				<a>
-					<img src="assets/imgs/high_dpi/in_the_mirror.png",  height="auto", width="100%">
+					<img src="assets/imgs/acrylics/in_the_mirrow_low_dpi.png",  height="auto", width="100%">
 					Shop Best Selling Acrylics
 				</a>
 			</div>
@@ -587,7 +610,7 @@ The title is what appears in the tab label on a browser.
 			</a>
 
 			<!--
-			<a href="http://marathonlitreview.com/2023/08/09/when-bridges-burn-mckenna-wilds/", target="_blank">
+			<a href="", target="_blank">
 				<div class="shadow_box">
 					
 					<img src='assets/imgs/drawings/charcoal circles - i.jpeg', width='100%', height='auto', class='center'>
