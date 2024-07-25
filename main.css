@@ -1,0 +1,644 @@
+/*
+-- main header font options -- 
+Zeyada https://fonts.google.com/specimen/Zeyada?category=Handwriting
+Arizonia https://fonts.google.com/specimen/Arizonia?category=Handwriting 
+Monsieur La Doulaise https://fonts.google.com/specimen/Monsieur+La+Doulaise?category=Handwriting
+
+body{
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  color: #111;
+  background-color: #eee;
+}
+
+small headers were originally 'Square Peg', Handwriting;
+
+3-HEX code reader: http://billabel.com/code/hex-colors/ 
+
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Zeyada');
+@import url('https://fonts.googleapis.com/css?family=Square+Peg');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield');
+@import url('https://fonts.googleapis.com/css?family=Qwitcher+Grypen');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal');
+
+/*@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore');*/
+
+/*
+#wrapper{
+margin: 0 auto;
+}
+*/
+
+
+
+/**
+ * HEADER
+ */
+
+.header {
+  position: relative;
+  padding-block: 15px;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+  /*margin-bottom: 67px;*/
+}
+
+.header.active {
+  position: relative;
+  box-shadow: none;
+}
+
+.header .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.header-search {
+  display: block;
+  position: relative;
+  width: max-content;
+}
+
+.header-search .input-field {
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  width: 280px;
+  padding: 12px 30px;
+  margin: 2em;
+  font-size: 12px;
+  border-radius: 6px;
+  transition: var(--transition-1);
+}
+
+.header-search .input-field:focus { outline: 1px solid var(--eerie-black); }
+
+.header-search .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--eerie-black);
+}
+
+.header-search .search-btn ion-icon { --ionicon-stroke-width: 30px; }
+
+.header .logo { margin-inline: auto; }
+
+
+.header-actions {
+  all: unset;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.nav-open-btn,
+.header-action-btn:nth-child(2),
+.navbar-top,
+.overlay { display: none; }
+
+.navbar {
+  all: unset;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
+  background: var(--white);
+}
+
+.header.active .navbar {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 20px hsla(0, 0%, 0%, 0.1);
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-list > li:not(:last-child) { border-bottom: none; }
+
+.navbar-link {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  padding-block: 20px;
+}
+
+.navbar-link:is(:hover, :focus) { color: var(--middle-blue-green); }
+
+/*
+*/
+
+
+
+
+
+
+
+.topnav {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+
+  /*
+  margin: 1em;
+  */
+}
+
+/* Style the links inside the navigation bar 
+originally soft gray #f2f2f2 
+padding: 14px 16px;*/
+.topnav a {
+  float: none;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav ul{
+  /* for white block around menu options
+  display: inline-block;
+  */
+  list-style-type: none;
+}
+
+.topnav-centered a {
+  float: none;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+body{
+  margin: 0;
+  /* font-family: Josefin Sans;  'EB Garamond', serif; */
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+
+  /* height: 100%; for paralllax effect image scroll */
+}
+
+
+
+/* 
+good is 
+https://blog.hubspot.com/website/parallax-scrolling  
+
+best is
+https://blog.logrocket.com/create-parallax-scrolling-css/#:~:text=Decreasing%20the%20value%20for%20translateZ,slower%20than%20translateZ(%2D1px)%20.
+.parallax {
+  background-image: url("assets/imgs/neelkamal-deka-gwYhY4POEzc-unsplash.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transform: translateZ(-99px) scale(2);
+  transform: translateZ(-99px) scale(2);
+  z-index: 3;
+
+div{
+  font-size: 50px;
+  text-align: center;
+}
+}
+*/
+.backgroundflowers {
+  background-image: url("assets/imgs/neelkamal-deka-gwYhY4POEzc-unsplash.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.copyright {
+	text-align: center;
+	padding: 25px;
+	font-size: 15px;
+	font-weight: 200;
+	font-family: EB Garamond, serif;
+}
+
+
+
+h1{
+  font-family: Arsenal, sans-serif;
+  /* Josefin Sans
+  font-size: 80px;
+  font-weight: 400;*/
+  font-size: 60px;
+  font-weight: 100;
+  text-align: center;
+  padding: 0em;
+  margin-bottom: 0em;
+}
+
+h1.block{
+  font-weight: 500; 
+  padding: 1em;
+  margin: 1em;
+  width: 500px;
+  position: center;
+}
+
+.calligraphy{
+  font-family: Ms Madi, Handwriting;
+  font-size: 200px;
+  text-align: left;
+}
+
+.background-text{
+  z-index: -1;
+  position: absolute;
+}
+
+img{
+	max-width: 100%; /* Should set the image to take up 100% of its containing element, fixes phone screen sizes. */
+}
+
+
+h2{
+  font-family: Josefin Sans;
+  font-size: 50px;
+  text-align: center;
+}
+
+
+h3{
+	font-family: Josefin Sans;
+	color: black;
+	font-size: 30px;
+  font-weight: 150;
+}
+
+
+/* h2 is basically my subtitle */
+h3.block{
+	font-weight: 500; 
+  padding: 0em;
+  /*
+	font-style: italic;
+	position: relative;
+	text-decoration: none;
+	float: none;
+  	top: 50%;
+	text-align: center;
+	width: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);*/
+}
+
+/* Grid containter for 4 columns -- gallery 
+margin-bottom: 1em;
+margin: top right bottom left
+    
+
+*/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px; 
+    font-family: Josefin Sans;
+    font-size: 25px;
+    font-weight: 150;
+    margin: 0em 4em 0em 4em;
+}
+
+
+/* Grid containter for 3 columns */
+.grid-container1_1_1 {
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px; /* in new browsers just gap, older grid-gap */
+
+    font-family: Josefin Sans;
+    font-size: 25px;
+    font-weight: 150;
+
+    margin:4em;
+}
+
+
+
+
+.grid-container3_1 {
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px; /* in new browsers just gap, older grid-gap */
+}
+
+/*
+*/
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; 
+    margin: 2em;
+}
+
+marquee{
+  font-size: xx-large;
+}
+
+h4{
+  font-weight: 900;
+}
+
+.shadow_box {
+  transition: box-shadow .3s;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+
+  /*
+  width: 300px;
+  height: 500px;
+  margin: 50px;
+  float: left;
+  
+  position: center;
+  padding: 50px;
+  margin: 25px 10px 25px 10px;*/
+  padding: 10px;
+  border-radius:10px;
+  border: 1px solid #ccc; /* soft gray http://billabel.com/code/hex-colors/ */
+  background: #fff;
+}
+
+.shadow_box:hover {
+  /*box-shadow: 0 0 11px rgba(33,33,33,.2); */
+  /* inset | offset-x | offset-y | color */
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0 25px rgba(33,33,33,.5); 
+  background-color: #F9F9F9;
+}
+
+.bg {
+  /* padding: 200px 8em 3em 8em; */
+  background-image: url("assets/imgs/unsplash/stationery.jpg");
+  padding: 1em;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fullscreen-logo {
+  /* padding: 200px 8em 3em 8em; */
+  background-image: url("assets/imgs/logos/logo.png");
+  padding: 0em;
+
+  /* width: 100%;*/
+  
+  background-size: 100% auto;
+
+  /* Center and scale the image nicely 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+  
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontal-center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+button {
+  border: none;
+  /*padding: 15px 32px;*/
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: center;
+}
+
+.list{
+  /* padding: 0em 8em 0em 8em; */
+  padding: 3em 8em;
+  animation: fadein 2s;
+  position: relative;
+  z-index: 0;
+}
+
+
+a, a:visited {
+  /*color: #000;*/
+  text-decoration: none;
+  line-height: 1.6em;
+}
+
+a:hover {
+  color: blue;
+}
+
+.bio{
+  padding: 1.8em 0em 3em 2em;
+  float: right;
+  text-align: justify;
+  width: 30vw;
+  z-index: 99999;
+  position: relative;
+}
+
+.bioTitle{
+  display: none;
+}
+
+.contact{
+  text-align: center;
+  margin-bottom: 3em;
+}
+.contact h3{
+  font-size: 1.8em;
+}
+
+.contact a{
+  text-decoration: underline;
+}
+
+.fab, .fas, .fa-solid{
+  vertical-align: middle;
+  background-color: #333; /* dark blue gray */
+  border-radius: 60%;
+  padding: 0.4em;
+  margin: 0.8em;
+}
+
+a > .fab, a > .fas, a > .fa-solid{
+  color: #eee; /* soft gray */
+  font-size: 5em;
+}
+
+/*
+center images class 
+*/
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.parallax-full {
+  /* source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax_percent */
+  background-image: url("assets/backgrounds/annie-spratt-Ff6lw9hTnEw-unsplash.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /*
+  -webkit-transform: translateZ(-99px) scale(2);
+  transform: translateZ(-99px) scale(2);
+  z-index: 3;
+  */
+
+.parallax-stationary-bg {
+  /* source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_parallax */
+
+  /* The image used */
+  background-image: url("assets/backgrounds/annie-spratt-Ff6lw9hTnEw-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+.fab, .fas, .fa-solid{
+  vertical-align: middle;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 0.7em;
+  margin: 0.8em;
+}
+
+a > .fab, a > .fas, a > .fa-solid{
+  color: #eee;
+  font-size: 1.2em;
+}
+
+*/
+
+.fab:hover, .fas:hover, .fa-solid:hover{
+  background-color: blue;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media only screen and (max-device-width: 480px) {
+
+        h1{
+          margin-right: -0.7em;
+          padding-bottom: 0.4em;
+        }
+        h1.name{
+          text-align: center;
+          margin: 2em 0 0 0;
+          padding: 0;
+          /*
+          decide font size here later -- is this for phone screens?
+          */
+          font-size: 2em;
+        }
+        .list{
+          padding: 0em 3em;
+        }
+        .bio{
+          padding: 1em 0;
+          float: none;
+          text-align: left;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .bioTitle{
+          display: block;
+        }
+
+        /* Add responsiveness - on screens less than 500px, make the navigation 
+        links appear on top of each other, instead of next to each other */
+        .topnav a {
+          float: none;
+          display: block;
+        }
+
+        .topnav-centered a {
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+        }
+
+        /*
+        .parallax {
+		    background-attachment: scroll;
+		}
+		*/
+    }
